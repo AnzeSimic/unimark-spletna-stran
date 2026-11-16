@@ -9,21 +9,20 @@
 <section class="section">
   <div class="container split">
     <div class="text-block reveal">
-      <span class="kicker">Osnove</span>
-      <h2>Kaj je pH in zakaj je pomemben?</h2>
-      <p class="lead" style="margin-top:16px">pH je lestvica od 0 do 14, ki pove, kako kisla ali bazična je snov. Vrednost 7 je nevtralna.</p>
-      <p>Različne vrste umazanije se odzivajo na različna čistila. Vodni kamen raztopi kislina, maščobo razgradi baza, za vsakodnevni prah in občutljive površine pa je najvarnejše nevtralno čistilo.</p>
-      <p>Ko čistilo izberemo pravilno, potrebujemo manj drgnjenja in manj sredstva, površina pa ostane nepoškodovana.</p>
+      <span class="kicker">{{t:osnove.nadnaslov}}</span>
+      <h2>{{t:osnove.naslov}}</h2>
+      <p class="lead" style="margin-top:16px">{{t:osnove.uvod}}</p>
+      {{r:osnove.besedilo}}
     </div>
-    <img class="content-img reveal" style="--d:100ms;aspect-ratio:4/3" src="{{photo:rokavice}}" alt="Čiščenje površine z razpršilom in rokavicami" width="1400" height="933" loading="lazy" decoding="async">
+    {{img:osnove.slika:content-img reveal:--d:100ms;aspect-ratio:4/3}}
   </div>
 </section>
 
 <section class="section section-tint">
   <div class="container">
     <div class="sec-head">
-      <span class="kicker">pH lestvica</span>
-      <h2>Kislo, nevtralno ali bazično?</h2>
+      <span class="kicker">{{t:lestvica.nadnaslov}}</span>
+      <h2>{{t:lestvica.naslov}}</h2>
     </div>
     {{ph}}
   </div>
@@ -32,15 +31,12 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <span class="kicker">Pogoste napake</span>
-      <h2>Česa ne počnite doma</h2>
-      <p>Te napake vidimo najpogosteje. Večina pusti trajne posledice.</p>
+      <span class="kicker">{{t:napake.nadnaslov}}</span>
+      <h2>{{t:napake.naslov}}</h2>
+      <p>{{t:napake.besedilo}}</p>
     </div>
     <div class="mistakes">
-      <div class="mistake reveal"><span class="x">{{icon:close}}</span><div><h3>Kis na marmorju</h3><p>Kis in citronska kislina razjedata marmor, apnenec in travertin. Ostanejo motne lise, ki jih odstrani le brušenje.</p></div></div>
-      <div class="mistake reveal" style="--d:80ms"><span class="x">{{icon:close}}</span><div><h3>Mešanje čistil</h3><p>Nikoli ne mešajte čistil s klorom s kislimi čistili ali amoniakom. Nastajajo strupeni plini.</p></div></div>
-      <div class="mistake reveal"><span class="x">{{icon:close}}</span><div><h3>Preveč vode na parketu</h3><p>Les vpija vlago in nabrekne. Parket čistimo z dobro ožeto krpo in nevtralnim čistilom.</p></div></div>
-      <div class="mistake reveal" style="--d:80ms"><span class="x">{{icon:close}}</span><div><h3>Grobe gobice na steklu in inoksu</h3><p>Abrazivi pustijo drobne praske, ki se sčasoma vidijo kot motnost.</p></div></div>
+      {{#each napake.seznam}}<div class="mistake reveal"{{.ds:80:2}}><span class="x">{{icon:close}}</span><div><h3>{{.naslov}}</h3><p>{{.besedilo}}</p></div></div>{{/each}}
     </div>
   </div>
 </section>
@@ -48,17 +44,14 @@
 <section class="section section-tint">
   <div class="container">
     <div class="sec-head">
-      <span class="kicker">Varna domača čistila</span>
-      <h2>Naravna sredstva za vsak dan</h2>
-      <p>Za vzdrževanje med našimi obiski priporočamo naravna sredstva, varna za ljudi in živali.</p>
+      <span class="kicker">{{t:sredstva.nadnaslov}}</span>
+      <h2>{{t:sredstva.naslov}}</h2>
+      <p>{{t:sredstva.besedilo}}</p>
     </div>
     <div class="remedies">
-      <article class="remedy reveal"><span class="icon-circle">{{icon:drop}}</span><span class="ph">pH ≈ 2</span><h3>Citronska kislina</h3><p>Za vodni kamen v grelnikih, na pipah in tuš kabinah.</p><p class="warn">Ne na marmor in naravni kamen.</p></article>
-      <article class="remedy reveal" style="--d:80ms"><span class="icon-circle">{{icon:drop}}</span><span class="ph">pH ≈ 2–3</span><h3>Kis</h3><p>Razredčen z vodo očisti steklo in nevtralizira vonjave.</p><p class="warn">Ne na marmor, granit in naoljen les.</p></article>
-      <article class="remedy reveal" style="--d:160ms"><span class="icon-circle">{{icon:drop}}</span><span class="ph">pH ≈ 8–9</span><h3>Soda bikarbona</h3><p>Za maščobo v pečici, zažgane lonce in vonjave.</p><p class="warn">Previdno na sijajnih površinah.</p></article>
-      <article class="remedy reveal" style="--d:240ms"><span class="icon-circle">{{icon:drop}}</span><span class="ph">Mineralna voda</span><h3>Radenska</h3><p>Pri svežih madežih na tekstilu in za sijaj stekla ter kroma.</p><p class="warn">Madež popivnajte, ne drgnite.</p></article>
+      {{#each sredstva.seznam}}<article class="remedy reveal"{{.ds:80:4}}><span class="icon-circle">{{icon:drop}}</span><span class="ph">{{.ph}}</span><h3>{{.naslov}}</h3><p>{{.besedilo}}</p><p class="warn">{{.opozorilo}}</p></article>{{/each}}
     </div>
-    <div class="warn-box reveal">{{icon:alert}}<div><strong>Kisa in sode bikarbone ne mešajte skupaj.</strong> Mešanica sicer peni, a se snovi nevtralizirata in učinek se izgubi. Uporabite ju ločeno.</div></div>
+    <div class="warn-box reveal">{{icon:alert}}<div><strong>{{t:sredstva.opozorilo_krepko}}</strong> {{t:sredstva.opozorilo}}</div></div>
   </div>
 </section>
 

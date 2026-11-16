@@ -38,6 +38,751 @@ content:
         type: string
         description: "Zapis kot 8.00–13.00. Če ob sobotah ne delate, napišite Zaprto."
 
+  - name: strani
+    label: Besedila in slike strani
+    type: group
+    items:
+      - name: stran-domov
+        label: "Domača stran"
+        type: file
+        path: content/strani/index.json
+        format: json
+        fields:
+          - name: uvod
+            label: "Uvod (veliki naslov na vrhu)"
+            type: object
+            fields:
+              - name: znacka
+                label: "Napis nad naslovom"
+                type: string
+              - name: naslov
+                label: "Glavni naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo pod naslovom"
+                type: text
+              - name: slika
+                label: "Slika v ozadju"
+                type: image
+                description: "Široka, ležeča fotografija."
+              - name: kljukice
+                label: "Kratke prednosti s kljukico"
+                type: string
+                list: true
+          - name: prednosti
+            label: "Pas s štirimi prednostmi"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.naslov}"
+            fields:
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: string
+              - name: ikona
+                label: "Ikona"
+                type: select
+                options:
+                  values:
+                    - { name: check, label: "Kljukica" }
+                    - { name: calendar, label: "Koledar" }
+                    - { name: flask, label: "Steklenička" }
+                    - { name: users, label: "Ljudje" }
+                    - { name: euro, label: "Evro" }
+                    - { name: clipboard, label: "Seznam" }
+                    - { name: sparkles, label: "Iskrice" }
+                    - { name: shield, label: "Ščit" }
+                    - { name: target, label: "Tarča" }
+                    - { name: eye, label: "Oko" }
+                    - { name: home, label: "Hiša" }
+                    - { name: office, label: "Pisarna" }
+                    - { name: window, label: "Okno" }
+                    - { name: spray, label: "Razpršilo" }
+                    - { name: drop, label: "Kapljica" }
+                    - { name: clock, label: "Ura" }
+                    - { name: phone, label: "Telefon" }
+                    - { name: star, label: "Zvezda" }
+          - name: storitve
+            label: "Razdelek Storitve"
+            type: object
+            description: "Kartice storitev urejate v razdelku Storitve."
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+          - name: zakaj
+            label: "Razdelek Zakaj Unimark"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+              - name: slika
+                label: "Velika slika"
+                type: image
+              - name: slika_opis
+                label: "Opis velike slike"
+                type: string
+              - name: slika2
+                label: "Manjša slika"
+                type: image
+              - name: slika2_opis
+                label: "Opis manjše slike"
+                type: string
+              - name: znacka_stevilka
+                label: "Število na znački"
+                type: string
+                description: "Npr. 10+"
+              - name: znacka_besedilo
+                label: "Besedilo na znački"
+                type: text
+              - name: tocke
+                label: "Točke s kljukico"
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.naslov}"
+                fields:
+                  - name: naslov
+                    label: "Naslov"
+                    type: string
+                  - name: besedilo
+                    label: "Besedilo"
+                    type: string
+          - name: koraki
+            label: "Razdelek Kako poteka"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: seznam
+                label: "Koraki"
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.naslov}"
+                fields:
+                  - name: naslov
+                    label: "Naslov"
+                    type: string
+                  - name: besedilo
+                    label: "Besedilo"
+                    type: text
+                  - name: ikona
+                    label: "Ikona"
+                    type: select
+                    options:
+                      values:
+                        - { name: check, label: "Kljukica" }
+                        - { name: calendar, label: "Koledar" }
+                        - { name: flask, label: "Steklenička" }
+                        - { name: users, label: "Ljudje" }
+                        - { name: euro, label: "Evro" }
+                        - { name: clipboard, label: "Seznam" }
+                        - { name: sparkles, label: "Iskrice" }
+                        - { name: shield, label: "Ščit" }
+                        - { name: target, label: "Tarča" }
+                        - { name: eye, label: "Oko" }
+                        - { name: home, label: "Hiša" }
+                        - { name: office, label: "Pisarna" }
+                        - { name: window, label: "Okno" }
+                        - { name: spray, label: "Razpršilo" }
+                        - { name: drop, label: "Kapljica" }
+                        - { name: clock, label: "Ura" }
+                        - { name: phone, label: "Telefon" }
+                        - { name: star, label: "Zvezda" }
+          - name: ph
+            label: "Razdelek o čistilih (pH)"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+          - name: rezultati
+            label: "Razdelek Rezultati (prej/potem)"
+            type: object
+            description: "Sliko z drsnikom urejate v razdelku Prej in potem (prva primerjava)."
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+              - name: tocke
+                label: "Točke s kljukico"
+                type: string
+                list: true
+          - name: mnenja
+            label: "Razdelek Mnenja strank"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+          - name: vprasanja
+            label: "Razdelek Pogosta vprašanja"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+                description: "V besedilo lahko napišete [telefon] ali [email] in na strani se pokaže povezava."
+          - name: seo
+            label: "Google (naslov in opis v iskalniku)"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov v zavihku in na Googlu"
+                type: string
+              - name: opis
+                label: "Opis na Googlu (do 160 znakov)"
+                type: text
+      - name: stran-o-nas
+        label: "O nas"
+        type: file
+        path: content/strani/o-nas.json
+        format: json
+        fields:
+          - name: pasica
+            label: "Pasica na vrhu strani"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: podnaslov
+                label: "Besedilo pod naslovom"
+                type: text
+              - name: slika
+                label: "Slika v ozadju"
+                type: image
+                description: "Široka, ležeča fotografija."
+          - name: zgodba
+            label: "Kdo smo"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: uvod
+                label: "Uvodni stavek"
+                type: text
+              - name: besedilo
+                label: "Besedilo"
+                type: rich-text
+                options:
+                  format: html
+                  media: false
+              - name: slika
+                label: "Velika slika"
+                type: image
+              - name: slika_opis
+                label: "Opis velike slike"
+                type: string
+              - name: slika2
+                label: "Manjša slika"
+                type: image
+              - name: slika2_opis
+                label: "Opis manjše slike"
+                type: string
+              - name: znacka_stevilka
+                label: "Število na znački"
+                type: string
+              - name: znacka_besedilo
+                label: "Besedilo na znački"
+                type: text
+          - name: stevilke
+            label: "Številke (temni pas)"
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.stevilka} {fields.opis}"
+            fields:
+              - name: stevilka
+                label: "Število"
+                type: string
+                description: "Npr. 10+. [st_storitev] pokaže število storitev."
+              - name: opis
+                label: "Opis"
+                type: string
+          - name: vrednote
+            label: "Vrednote"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: seznam
+                label: "Vrednote"
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.naslov}"
+                fields:
+                  - name: naslov
+                    label: "Naslov"
+                    type: string
+                  - name: besedilo
+                    label: "Besedilo"
+                    type: text
+                  - name: ikona
+                    label: "Ikona"
+                    type: select
+                    options:
+                      values:
+                        - { name: check, label: "Kljukica" }
+                        - { name: calendar, label: "Koledar" }
+                        - { name: flask, label: "Steklenička" }
+                        - { name: users, label: "Ljudje" }
+                        - { name: euro, label: "Evro" }
+                        - { name: clipboard, label: "Seznam" }
+                        - { name: sparkles, label: "Iskrice" }
+                        - { name: shield, label: "Ščit" }
+                        - { name: target, label: "Tarča" }
+                        - { name: eye, label: "Oko" }
+                        - { name: home, label: "Hiša" }
+                        - { name: office, label: "Pisarna" }
+                        - { name: window, label: "Okno" }
+                        - { name: spray, label: "Razpršilo" }
+                        - { name: drop, label: "Kapljica" }
+                        - { name: clock, label: "Ura" }
+                        - { name: phone, label: "Telefon" }
+                        - { name: star, label: "Zvezda" }
+          - name: obmocje
+            label: "Območje delovanja"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+              - name: glavni_kraji
+                label: "Glavni kraji (poudarjeni)"
+                type: string
+                list: true
+              - name: kraji
+                label: "Ostali kraji"
+                type: string
+                list: true
+          - name: seo
+            label: "Google (naslov in opis v iskalniku)"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov v zavihku in na Googlu"
+                type: string
+              - name: opis
+                label: "Opis na Googlu (do 160 znakov)"
+                type: text
+      - name: stran-storitve
+        label: "Stran Storitve"
+        type: file
+        path: content/strani/storitve.json
+        format: json
+        fields:
+          - name: pasica
+            label: "Pasica na vrhu strani"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: podnaslov
+                label: "Besedilo pod naslovom"
+                type: text
+              - name: slika
+                label: "Slika v ozadju"
+                type: image
+                description: "Široka, ležeča fotografija."
+          - name: prednosti
+            label: "Kaj dobite z Unimarkom"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: seznam
+                label: "Prednosti"
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.naslov}"
+                fields:
+                  - name: naslov
+                    label: "Naslov"
+                    type: string
+                  - name: besedilo
+                    label: "Besedilo"
+                    type: text
+                  - name: ikona
+                    label: "Ikona"
+                    type: select
+                    options:
+                      values:
+                        - { name: check, label: "Kljukica" }
+                        - { name: calendar, label: "Koledar" }
+                        - { name: flask, label: "Steklenička" }
+                        - { name: users, label: "Ljudje" }
+                        - { name: euro, label: "Evro" }
+                        - { name: clipboard, label: "Seznam" }
+                        - { name: sparkles, label: "Iskrice" }
+                        - { name: shield, label: "Ščit" }
+                        - { name: target, label: "Tarča" }
+                        - { name: eye, label: "Oko" }
+                        - { name: home, label: "Hiša" }
+                        - { name: office, label: "Pisarna" }
+                        - { name: window, label: "Okno" }
+                        - { name: spray, label: "Razpršilo" }
+                        - { name: drop, label: "Kapljica" }
+                        - { name: clock, label: "Ura" }
+                        - { name: phone, label: "Telefon" }
+                        - { name: star, label: "Zvezda" }
+          - name: seo
+            label: "Google (naslov in opis v iskalniku)"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov v zavihku in na Googlu"
+                type: string
+              - name: opis
+                label: "Opis na Googlu (do 160 znakov)"
+                type: text
+      - name: stran-strokovnost
+        label: "Strokovnost"
+        type: file
+        path: content/strani/strokovnost.json
+        format: json
+        fields:
+          - name: pasica
+            label: "Pasica na vrhu strani"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: podnaslov
+                label: "Besedilo pod naslovom"
+                type: text
+              - name: slika
+                label: "Slika v ozadju"
+                type: image
+                description: "Široka, ležeča fotografija."
+          - name: osnove
+            label: "Kaj je pH"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: uvod
+                label: "Uvodni stavek"
+                type: text
+              - name: besedilo
+                label: "Besedilo"
+                type: rich-text
+                options:
+                  format: html
+                  media: false
+              - name: slika
+                label: "Slika"
+                type: image
+              - name: slika_opis
+                label: "Opis slike"
+                type: string
+          - name: lestvica
+            label: "pH lestvica (naslov)"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+          - name: napake
+            label: "Pogoste napake"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+              - name: seznam
+                label: "Napake"
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.naslov}"
+                fields:
+                  - name: naslov
+                    label: "Naslov"
+                    type: string
+                  - name: besedilo
+                    label: "Besedilo"
+                    type: text
+          - name: sredstva
+            label: "Domača čistila"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+              - name: seznam
+                label: "Čistila"
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{fields.naslov}"
+                fields:
+                  - name: ph
+                    label: "pH"
+                    type: string
+                    description: "Npr. pH ≈ 2"
+                  - name: naslov
+                    label: "Ime"
+                    type: string
+                  - name: besedilo
+                    label: "Za kaj"
+                    type: text
+                  - name: opozorilo
+                    label: "Opozorilo"
+                    type: string
+              - name: opozorilo_krepko
+                label: "Opozorilo spodaj (krepko)"
+                type: string
+              - name: opozorilo
+                label: "Opozorilo spodaj (besedilo)"
+                type: text
+          - name: seo
+            label: "Google (naslov in opis v iskalniku)"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov v zavihku in na Googlu"
+                type: string
+              - name: opis
+                label: "Opis na Googlu (do 160 znakov)"
+                type: text
+      - name: stran-reference
+        label: "Reference"
+        type: file
+        path: content/strani/reference.json
+        format: json
+        fields:
+          - name: pasica
+            label: "Pasica na vrhu strani"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: podnaslov
+                label: "Besedilo pod naslovom"
+                type: text
+              - name: slika
+                label: "Slika v ozadju"
+                type: image
+                description: "Široka, ležeča fotografija."
+          - name: galerija
+            label: "Naslov galerije"
+            type: object
+            description: "Slike galerije urejate v razdelku Galerija."
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+          - name: mnenja
+            label: "Naslov mnenj"
+            type: object
+            fields:
+              - name: nadnaslov
+                label: "Mali naslov nad naslovom"
+                type: string
+              - name: naslov
+                label: "Naslov"
+                type: string
+          - name: seo
+            label: "Google (naslov in opis v iskalniku)"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov v zavihku in na Googlu"
+                type: string
+              - name: opis
+                label: "Opis na Googlu (do 160 znakov)"
+                type: text
+      - name: stran-vprasanja
+        label: "Stran Pogosta vprašanja"
+        type: file
+        path: content/strani/pogosta-vprasanja.json
+        format: json
+        fields:
+          - name: pasica
+            label: "Pasica na vrhu strani"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: podnaslov
+                label: "Besedilo pod naslovom"
+                type: text
+              - name: slika
+                label: "Slika v ozadju"
+                type: image
+                description: "Široka, ležeča fotografija."
+          - name: seo
+            label: "Google (naslov in opis v iskalniku)"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov v zavihku in na Googlu"
+                type: string
+              - name: opis
+                label: "Opis na Googlu (do 160 znakov)"
+                type: text
+      - name: stran-kontakt
+        label: "Kontakt"
+        type: file
+        path: content/strani/kontakt.json
+        format: json
+        fields:
+          - name: pasica
+            label: "Pasica na vrhu strani"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: podnaslov
+                label: "Besedilo pod naslovom"
+                type: text
+              - name: slika
+                label: "Slika v ozadju"
+                type: image
+                description: "Široka, ležeča fotografija."
+          - name: kartice
+            label: "Kartice na vrhu"
+            type: object
+            description: "Telefon, e-pošto in delovni čas urejate v razdelku Kontakt in delovni čas."
+            fields:
+              - name: telefon_opis
+                label: "Besedilo pod telefonom"
+                type: string
+              - name: email_opis
+                label: "Besedilo pod e-pošto"
+                type: string
+          - name: seo
+            label: "Google (naslov in opis v iskalniku)"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov v zavihku in na Googlu"
+                type: string
+              - name: opis
+                label: "Opis na Googlu (do 160 znakov)"
+                type: text
+      - name: splosno
+        label: "Glava, noga in poziv"
+        type: file
+        path: content/splosno.json
+        format: json
+        fields:
+          - name: obmocje
+            label: "Območje v vrstici čisto na vrhu"
+            type: string
+            description: "Npr. Grosuplje, Ljubljana in okolica"
+          - name: noga_opis
+            label: "Kratek opis podjetja v nogi"
+            type: text
+          - name: poziv
+            label: "Poziv »Potrebujete …« na dnu strani"
+            type: object
+            fields:
+              - name: naslov
+                label: "Naslov"
+                type: string
+              - name: besedilo
+                label: "Besedilo"
+                type: text
+
   - name: ocene
     label: Mnenja strank
     type: file

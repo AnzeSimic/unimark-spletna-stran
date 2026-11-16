@@ -1,0 +1,70 @@
+{
+  "seo": {
+    "naslov": "Unimark | Čistilni servis Grosuplje in Ljubljana",
+    "opis": "Čistilni servis Unimark: čiščenje stanovanj, pisarn, stopnišč, muzejev in galerij, oken ter generalna čiščenja po prenovi. Grosuplje, Ljubljana z okolico. 070 325 039."
+  },
+  "uvod": {
+    "znacka": "Čistilni servis z več kot 10 leti izkušenj",
+    "naslov": "Profesionalno čiščenje domov in poslovnih prostorov",
+    "besedilo": "Čistimo stanovanja, pisarne, stopnišča, muzeje in galerije v Grosuplju, Ljubljani in okolici. S profesionalno opremo in pravim čistilom za vsako površino.",
+    "slika": "/assets/img/foto/pisarna-cistilki.webp",
+    "kljukice": ["Brezplačna ponudba", "Lastna oprema in čistila", "Termin po vašem urniku"]
+  },
+  "prednosti": [
+    { "naslov": "Več kot 10 let", "besedilo": "izkušenj s čiščenjem domov, podjetij in ustanov", "ikona": "calendar" },
+    { "naslov": "Prava čistila", "besedilo": "izbrana glede na pH, umazanijo in material", "ikona": "flask" },
+    { "naslov": "Zanesljiva ekipa", "besedilo": "izurjeni ljudje, ki poznajo vaš prostor", "ikona": "users" },
+    { "naslov": "Jasne cene", "besedilo": "brezplačna ponudba brez skritih stroškov", "ikona": "euro" }
+  ],
+  "storitve": {
+    "nadnaslov": "Naše storitve",
+    "naslov": "Čiščenje za vsak prostor",
+    "besedilo": "Od družinskega stanovanja do razstavišča. Izberite storitev in preberite, kaj vključuje."
+  },
+  "zakaj": {
+    "nadnaslov": "Zakaj Unimark",
+    "naslov": "Čistimo temeljito in z znanjem o materialih",
+    "besedilo": "Ne čistimo le površinsko. Vsak prostor obravnavamo z znanjem o materialih in pravih čistilih, da je rezultat lep, varen in obstojen.",
+    "slika": "/assets/img/foto/potem1.webp",
+    "slika_opis": "Naša ekipa med čiščenjem steklene strehe zimskega vrta",
+    "slika2": "/assets/img/foto/ekipa-stopnice.webp",
+    "slika2_opis": "Čistilka s pripomočki za čiščenje na stopnicah",
+    "znacka_stevilka": "10+",
+    "znacka_besedilo": "let\nizkušenj",
+    "tocke": [
+      { "naslov": "Izurjena ekipa", "besedilo": "Vedno isti ljudje, ki jim lahko zaupate." },
+      { "naslov": "Profesionalna oprema", "besedilo": "Prinesemo vse potrebno." },
+      { "naslov": "pH-varna čistila", "besedilo": "Brez poškodb površin." },
+      { "naslov": "Prilagodljivi termini", "besedilo": "Od ponedeljka do sobote." }
+    ]
+  },
+  "koraki": {
+    "nadnaslov": "Kako poteka",
+    "naslov": "Do čistega prostora v treh korakih",
+    "seznam": [
+      { "naslov": "Pošljite povpraševanje", "besedilo": "Izpolnite kratek obrazec ali nas pokličite. Povejte nam, kaj, kje in kako pogosto.", "ikona": "clipboard" },
+      { "naslov": "Prejmite ponudbo", "besedilo": "Pripravimo jasno ponudbo in uskladimo termin, ki vam najbolj ustreza.", "ikona": "calendar" },
+      { "naslov": "Uživajte v čistoči", "besedilo": "Pridemo s svojo opremo in opravimo delo. Vi samo vstopite v svež prostor.", "ikona": "sparkles" }
+    ]
+  },
+  "ph": {
+    "nadnaslov": "Naša strokovnost",
+    "naslov": "Pravo čistilo za vsako umazanijo",
+    "besedilo": "Čistilo izberemo glede na vrsto umazanije in občutljivost materiala. Napačna kemija lahko površine trajno poškoduje, prava jih zaščiti."
+  },
+  "rezultati": {
+    "nadnaslov": "Rezultati",
+    "naslov": "Razlika, ki se vidi",
+    "besedilo": "Zunanje žaluzije pred in po našem čiščenju. Lamele očistimo posamično, z nevtralnim čistilom, ki ne poškoduje aluminija.",
+    "tocke": ["Brez lis in sledi vode", "Brez poškodb premazov in tesnil", "Okna, žaluzije, steklene strehe in zimski vrtovi"]
+  },
+  "mnenja": {
+    "nadnaslov": "Mnenja strank",
+    "naslov": "Kaj pravijo naše stranke"
+  },
+  "vprasanja": {
+    "nadnaslov": "Pogosta vprašanja",
+    "naslov": "Odgovori na vaša vprašanja",
+    "besedilo": "Ne najdete odgovora? Pokličite nas na [telefon] ali nam pišite."
+  }
+}

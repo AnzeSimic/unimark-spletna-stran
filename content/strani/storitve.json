@@ -1,0 +1,37 @@
+{
+  "seo": {
+    "naslov": "Storitve čiščenja",
+    "opis": "Čiščenje domov, poslovnih prostorov, večstanovanjskih stavb, muzejev in galerij, oken in žaluzij ter generalna čiščenja po prenovi. Grosuplje, Ljubljana in okolica."
+  },
+  "pasica": {
+    "naslov": "Naše storitve čiščenja",
+    "podnaslov": "Šest storitev za vsak prostor, od stanovanja do razstavišča. Vse s profesionalno opremo in pravimi čistili.",
+    "slika": "/assets/img/foto/rokavice.webp"
+  },
+  "prednosti": {
+    "nadnaslov": "Pri vsaki storitvi",
+    "naslov": "Kaj dobite z Unimarkom",
+    "seznam": [
+      {
+        "naslov": "Pravo čistilo",
+        "besedilo": "Kislo, nevtralno ali bazično, prilagojeno umazaniji in materialu.",
+        "ikona": "flask"
+      },
+      {
+        "naslov": "Lastna oprema",
+        "besedilo": "Pridemo z vsem potrebnim. Vi ne pripravite ničesar.",
+        "ikona": "shield"
+      },
+      {
+        "naslov": "Jasna ponudba",
+        "besedilo": "Brezplačna in neobvezujoča, brez skritih stroškov.",
+        "ikona": "euro"
+      },
+      {
+        "naslov": "Vaš urnik",
+        "besedilo": "Od ponedeljka do sobote, enkratno ali redno.",
+        "ikona": "calendar"
+      }
+    ]
+  }
+}

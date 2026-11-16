@@ -9,16 +9,15 @@
 <section class="section">
   <div class="container split">
     <div class="photo-stack reveal">
-      <img class="main" src="{{photo:potem1}}" alt="Naša ekipa med čiščenjem steklene strehe" width="1000" height="1333" loading="lazy" decoding="async">
-      <img class="second" src="{{photo:okna}}" alt="Čiščenje okna" width="1400" height="933" loading="lazy" decoding="async">
-      <div class="stamp"><strong>10+</strong><span>let<br>izkušenj</span></div>
+      {{img:zgodba.slika:main}}
+      {{img:zgodba.slika2:second}}
+      <div class="stamp"><strong>{{t:zgodba.znacka_stevilka}}</strong><span>{{t:zgodba.znacka_besedilo}}</span></div>
     </div>
     <div class="text-block reveal" style="--d:100ms">
-      <span class="kicker">Kdo smo</span>
-      <h2>Čistimo z znanjem, ne le s krpo</h2>
-      <p class="lead" style="margin-top:16px">Naša zgodba se je začela z vprašanjem, ki ga mnogi ne postavijo: s čim čistimo?</p>
-      <p>Napačno čistilo lahko marmor razjeda, parket napihne, žaluzije pa pusti polne lis. Zato pri nas izbira čistila ni naključje. Vsak prostor najprej pogledamo, ugotovimo, za kakšno umazanijo in kakšne materiale gre, nato izberemo pravo sredstvo in tehniko.</p>
-      <p>Naša ekipa je majhna in zanesljiva, zato vas pogosto obiskujejo isti ljudje, ki vaš prostor in vaše navade dobro poznajo. Delamo od ponedeljka do sobote in se prilagodimo vašemu urniku.</p>
+      <span class="kicker">{{t:zgodba.nadnaslov}}</span>
+      <h2>{{t:zgodba.naslov}}</h2>
+      <p class="lead" style="margin-top:16px">{{t:zgodba.uvod}}</p>
+      {{r:zgodba.besedilo}}
       <p style="margin-top:26px"><a class="btn btn-amber" href="kontakt.html#povprasevanje">Zahtevajte ponudbo {{icon:arrow:arrow}}</a></p>
     </div>
   </div>
@@ -27,10 +26,7 @@
 <section class="section section-navy">
   <div class="container">
     <div class="stats">
-      <div class="stat"><strong>10+</strong><span>let izkušenj</span></div>
-      <div class="stat"><strong>{{service-count}}</strong><span>vrst storitev</span></div>
-      <div class="stat"><strong>1 dan</strong><span>do odgovora na povpraševanje</span></div>
-      <div class="stat"><strong>0 €</strong><span>za ponudbo</span></div>
+      {{#each stevilke}}<div class="stat"><strong>{{.stevilka}}</strong><span>{{.opis}}</span></div>{{/each}}
     </div>
   </div>
 </section>
@@ -38,14 +34,11 @@
 <section class="section">
   <div class="container">
     <div class="sec-head">
-      <span class="kicker">Naše vrednote</span>
-      <h2>Na čem gradimo</h2>
+      <span class="kicker">{{t:vrednote.nadnaslov}}</span>
+      <h2>{{t:vrednote.naslov}}</h2>
     </div>
     <div class="values">
-      <div class="value reveal"><span class="icon-circle">{{icon:target}}</span><h3>Natančnost</h3><p>Čistimo tudi robove, stikala, fuge in police nad očmi.</p></div>
-      <div class="value reveal" style="--d:80ms"><span class="icon-circle">{{icon:check}}</span><h3>Zanesljivost</h3><p>Pridemo ob dogovorjenem času in opravimo, kar smo obljubili.</p></div>
-      <div class="value reveal" style="--d:160ms"><span class="icon-circle">{{icon:flask}}</span><h3>Znanje</h3><p>Vemo, kdaj uporabiti kislo, nevtralno ali bazično čistilo.</p></div>
-      <div class="value reveal" style="--d:240ms"><span class="icon-circle">{{icon:eye}}</span><h3>Diskretnost</h3><p>Spoštujemo vašo zasebnost in lastnino.</p></div>
+      {{#each vrednote.seznam}}<div class="value reveal"{{.ds:80:4}}><span class="icon-circle">{{.icon:ikona:check}}</span><h3>{{.naslov}}</h3><p>{{.besedilo}}</p></div>{{/each}}
     </div>
   </div>
 </section>
@@ -53,12 +46,12 @@
 <section class="section section-tint">
   <div class="container split">
     <div class="reveal">
-      <span class="kicker">Območje delovanja</span>
-      <h2>Grosuplje, Ljubljana in okolica</h2>
-      <p class="lead" style="margin-top:16px">Naš sedež je v Brezjah pri Grosupljem, zato smo hitro pri vas. Za večje ali redne projekte pridemo tudi dlje.</p>
+      <span class="kicker">{{t:obmocje.nadnaslov}}</span>
+      <h2>{{t:obmocje.naslov}}</h2>
+      <p class="lead" style="margin-top:16px">{{t:obmocje.besedilo}}</p>
       <div class="places">
-        <span class="main">{{icon:pin}} Grosuplje</span><span class="main">{{icon:pin}} Ljubljana</span>
-        <span>{{icon:pin}} Škofljica</span><span>{{icon:pin}} Šmarje - Sap</span><span>{{icon:pin}} Ivančna Gorica</span><span>{{icon:pin}} Dobrepolje</span><span>{{icon:pin}} Višnja Gora</span><span>{{icon:pin}} Ig</span>
+        {{#each obmocje.glavni_kraji}}<span class="main">{{icon:pin}} {{.}}</span>{{/each}}
+        {{#each obmocje.kraji}}<span>{{icon:pin}} {{.}}</span>{{/each}}
       </div>
     </div>
     <div class="reveal" style="--d:100ms">{{contact-box}}</div>

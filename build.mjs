@@ -23,6 +23,7 @@ const slugify = (s) => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]
 // Odgovori in daljša besedila pridejo iz urejevalnika kot HTML (<p>…</p>); navadno besedilo zavijemo v <p>.
 const para = (s) => { const t = String(s || "").trim(); return /^<(p|ul|ol|div|h[1-6]|blockquote)[\s>]/i.test(t) ? t : t ? `<p>${t}</p>` : ""; };
 const CO = readJson("podjetje.json");
+const GEN = existsSync(join(CONTENT, "splosno.json")) ? readJson("splosno.json") : {};
 const phoneDigits = String(CO.telefon).replace(/[^\d+]/g, "");
 const phoneE164 = phoneDigits.startsWith("+") ? phoneDigits : phoneDigits.startsWith("00") ? `+${phoneDigits.slice(2)}` : `+386${phoneDigits.replace(/^0/, "")}`;
 const HOURS = { week: CO.delovni_cas_pon_pet || "6.00–18.00", sat: CO.delovni_cas_sobota || "" };
@@ -320,7 +321,7 @@ const phModule = () => `
   </article>
 </div>`;
 
-const cta = (title = "Potrebujete zanesljiv čistilni servis?", text = "Pošljite povpraševanje in brezplačno ponudbo prejmete običajno v enem delovnem dnevu.") => `
+const cta = (title = esc(GEN.poziv?.naslov || "Potrebujete zanesljiv čistilni servis?"), text = esc(GEN.poziv?.besedilo || "Pošljite povpraševanje in brezplačno ponudbo prejmete običajno v enem delovnem dnevu.")) => `
 <section class="cta" aria-label="Povpraševanje">
   <div class="container">
     <div>
@@ -497,7 +498,7 @@ const header = (active) => `
 <div class="topbar">
   <div class="container">
     <div class="topbar-group">
-      <span>${icon("pin")} Grosuplje, Ljubljana in okolica</span>
+      <span>${icon("pin")} ${esc(GEN.obmocje || "Grosuplje, Ljubljana in okolica")}</span>
       <span class="hide-md">${icon("clock")} ${SITE.hours}</span>
     </div>
     <div class="topbar-group">
@@ -557,7 +558,7 @@ const footer = () => `
   <div class="container footer-top">
     <div class="footer-about">
       <a class="footer-logo" href="index.html"><img src="assets/img/unimark-logo.png" alt="Unimark" width="900" height="284" loading="lazy"></a>
-      <p>Profesionalni čistilni servis za domove, podjetja, večstanovanjske stavbe in kulturne ustanove. Že več kot 10 let.</p>
+      <p>${esc(GEN.noga_opis || "Profesionalni čistilni servis za domove, podjetja, večstanovanjske stavbe in kulturne ustanove. Že več kot 10 let.")}</p>
     </div>
     <div>
       <h3>Storitve</h3>
@@ -831,10 +832,44 @@ const TOKENS = {
   updated: () => SITE.updated,
   stars: stars,
 };
+/* Besedila in slike strani iz content/strani/<stran>.json
+   {{t:pot}}   besedilo (varno, [telefon] [email] [st_storitev] postanejo povezave/vrednosti, nova vrstica → <br>)
+   {{r:pot}}   oblikovano besedilo iz urejevalnika (HTML)
+   {{src:pot}} {{w:pot}} {{hh:pot}}  pot in mere slike;  {{img:pot:razredi:slog}}  celotna <img> (opis iz pot_opis)
+   {{#each pot}} … {{.polje}} {{.r:polje}} {{.icon:polje:privzeta}} {{.d:korak:n}} … {{/each}}  ponavljanje seznama */
+let PAGE = {};
+const getPath = (o, p) => String(p).split(".").reduce((a, k) => (a == null ? undefined : a[k]), o);
+const fmt = (v) => esc(v == null ? "" : v)
+  .replace(/\[telefon\]/gi, `<a href="${SITE.phoneHref}">${SITE.phone}</a>`)
+  .replace(/\[email\]/gi, `<a href="mailto:${SITE.email}">${SITE.email}</a>`)
+  .replace(/\[st_storitev\]/gi, String(SERVICES.length))
+  .replace(/\r?\n/g, "<br>");
+const imgOf = (path) => pic(getPath(PAGE, path)) || { src: P.hero[0], w: P.hero[1], h: P.hero[2] };
+const imgTag = (path, cls = "", style = "") => {
+  const i = imgOf(path);
+  return `<img${cls ? ` class="${cls}"` : ""}${style ? ` style="${style}"` : ""} src="${i.src}" alt="${esc(getPath(PAGE, `${path}_opis`) || "")}" width="${i.w}" height="${i.h}" loading="lazy" decoding="async">`;
+};
+const renderEach = (html) => html.replace(/\{\{#each ([\w.]+)\}\}([\s\S]*?)\{\{\/each\}\}/g, (m, path, tpl) =>
+  arr(getPath(PAGE, path)).map((item, i) => tpl.replace(/\{\{\.([^{}]*)\}\}/g, (mm, k) => {
+    const [a, b, c] = k.split(":");
+    const val = (f) => (typeof item === "object" ? item[f] : item);
+    if (a === "") return fmt(item);
+    if (a === "r") return para(val(b));
+    if (a === "icon") return icon(ICONS[val(b)] ? val(b) : c || "check");
+    if (a === "d" || a === "ds") { const d = (i % (Number(c) || 99)) * Number(b); return !d ? "" : a === "ds" ? ` style="--d:${d}ms"` : `--d:${d}ms`; }
+    return fmt(val(a));
+  })).join(""));
 function render(html) {
-  return html.replace(/\{\{\s*([\w:,-]+)\s*\}\}/g, (m, key) => {
-    if (key.startsWith("icon:")) { const [, name, cls] = key.split(":"); return icon(name, cls || ""); }
-    if (key.startsWith("photo:")) { const [, k] = key.split(":"); if (!P[k]) throw new Error(`Neznana fotografija: ${m}`); return P[k][0]; }
+  return renderEach(html).replace(/\{\{\s*([^{}]+?)\s*\}\}/g, (m, key) => {
+    const parts = key.split(":"); const [kind, path, a = ""] = parts; const b = parts.slice(3).join(":");
+    if (kind === "icon") return icon(path, a || "");
+    if (kind === "photo") { if (!P[path]) throw new Error(`Neznana fotografija: ${m}`); return P[path][0]; }
+    if (kind === "t") return fmt(getPath(PAGE, path));
+    if (kind === "r") return para(getPath(PAGE, path));
+    if (kind === "src") return imgOf(path).src;
+    if (kind === "w") return String(imgOf(path).w);
+    if (kind === "hh") return String(imgOf(path).h);
+    if (kind === "img") return imgTag(path, a, b);
     if (!TOKENS[key]) throw new Error(`Neznan žeton: ${m}`);
     return TOKENS[key]();
   });
@@ -845,12 +880,21 @@ function readPage(file) {
   const m = raw.match(/^<!--\s*(\{[\s\S]*?\})\s*-->\s*/);
   if (!m) throw new Error(`Manjka glava v ${file}`);
   const meta = JSON.parse(m[1]);
+  const dataFile = join(CONTENT, "strani", file.replace(/\.html$/, ".json"));
+  PAGE = existsSync(dataFile) ? readJson(`strani/${file.replace(/\.html$/, ".json")}`) : {};
+  if (PAGE.seo?.naslov) meta.title = PAGE.seo.naslov;
+  if (PAGE.seo?.opis) meta.description = PAGE.seo.opis;
+  if (meta.banner && PAGE.pasica) {
+    const pb = PAGE.pasica;
+    meta.banner = { ...meta.banner, h1: pb.naslov ? esc(pb.naslov) : meta.banner.h1, lead: pb.podnaslov != null ? fmt(pb.podnaslov) : meta.banner.lead, photo: pb.slika && pic(pb.slika) ? pb.slika : meta.banner.photo };
+  }
   const jsonld = (meta.jsonld || []).map((j) => (j === "localbusiness" ? LOCAL_BUSINESS : j === "faq" ? faqJsonLd(FAQ.flatMap((g) => g.items)) : j));
   let body = render(raw.slice(m[0].length));
   if (meta.banner) {
     const b = meta.banner;
     body = banner(b.crumbs, b.h1, b.lead ? render(b.lead) : "", b.photo, b.updated ? `<p class="updated">Zadnja posodobitev: ${SITE.updated}</p>` : "") + "\n" + body;
   }
+  PAGE = {};
   return { ...meta, jsonld, path: file, body };
 }
 
@@ -863,11 +907,17 @@ mkdirSync(OUT, { recursive: true });
 cpSync(join(SRC, "assets"), join(OUT, "assets"), { recursive: true });
 // Izvirnikov JPG/PNG iz urejevalnika ne kopiramo – objavijo se pretvorjene WebP različice (prepImage).
 cpSync(join(ROOT, "assets"), join(OUT, "assets"), { recursive: true, filter: (p) => !/[\\/]foto[\\/].+\.(jpe?g|png|gif)$/i.test(p) });
-const contentImages = [
-  ...SERVICES.flatMap((s) => [s.photo, s.photo2]),
-  ...BA.flatMap((b) => [b.prej, b.potem]),
-  ...arr(readJson("galerija.json").slike).map((g) => g.slika),
-].filter((p) => p && !P[p]);
+// Vse slike, omenjene kjer koli v content/ (storitve, galerija, prej/potem, strani …)
+const contentImages = new Set();
+const walkJson = (v) => {
+  if (typeof v === "string" && /^\/?assets\/img\/.+\.(webp|jpe?g|png)$/i.test(v.trim())) contentImages.add(v);
+  else if (v && typeof v === "object") Object.values(v).forEach(walkJson);
+};
+const walkDir = (d) => readdirSync(d, { withFileTypes: true }).forEach((e) => {
+  if (e.isDirectory()) walkDir(join(d, e.name));
+  else if (e.name.endsWith(".json")) walkJson(JSON.parse(readFileSync(join(d, e.name), "utf8")));
+});
+walkDir(CONTENT);
 for (const p of contentImages) await prepImage(p);
 cpSync(join(ROOT, "assets", "img", "favicon.ico"), join(OUT, "favicon.ico"));
 for (const f of readdirSync(join(SRC, "static"))) cpSync(join(SRC, "static", f), join(OUT, f));

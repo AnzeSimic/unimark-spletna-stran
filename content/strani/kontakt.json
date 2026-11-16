@@ -1,0 +1,15 @@
+{
+  "seo": {
+    "naslov": "Kontakt in povpraševanje",
+    "opis": "Pokličite 070 325 039, pišite na info.unimark@gmail.com ali oddajte spletno povpraševanje. Brezplačna ponudba v enem delovnem dnevu."
+  },
+  "pasica": {
+    "naslov": "Kontakt",
+    "podnaslov": "Pokličite, pišite ali izpolnite obrazec. Brezplačno ponudbo prejmete običajno v enem delovnem dnevu.",
+    "slika": "/assets/img/foto/pisarna-miza.webp"
+  },
+  "kartice": {
+    "telefon_opis": "Pokličite ali pošljite SMS",
+    "email_opis": "Odgovorimo v enem delovnem dnevu"
+  }
+}

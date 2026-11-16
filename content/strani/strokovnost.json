@@ -1,0 +1,79 @@
+{
+  "seo": {
+    "naslov": "Strokovnost: pravo čistilo glede na pH",
+    "opis": "Zakaj je izbira čistila glede na pH pomembna? Kisla, nevtralna in bazična čistila, za katere površine so primerna in katera domača čistila so varna."
+  },
+  "pasica": {
+    "naslov": "Pravo čistilo za vsako umazanijo",
+    "podnaslov": "Čistilo vedno izberemo glede na vrsto umazanije in občutljivost materiala. Tako je rezultat lep, površina pa ostane nepoškodovana.",
+    "slika": "/assets/img/foto/razprsilka.webp"
+  },
+  "osnove": {
+    "nadnaslov": "Osnove",
+    "naslov": "Kaj je pH in zakaj je pomemben?",
+    "uvod": "pH je lestvica od 0 do 14, ki pove, kako kisla ali bazična je snov. Vrednost 7 je nevtralna.",
+    "besedilo": "<p>Različne vrste umazanije se odzivajo na različna čistila. Vodni kamen raztopi kislina, maščobo razgradi baza, za vsakodnevni prah in občutljive površine pa je najvarnejše nevtralno čistilo.</p>\n<p>Ko čistilo izberemo pravilno, potrebujemo manj drgnjenja in manj sredstva, površina pa ostane nepoškodovana.</p>",
+    "slika": "/assets/img/foto/rokavice.webp",
+    "slika_opis": "Čiščenje površine z razpršilom in rokavicami"
+  },
+  "lestvica": {
+    "nadnaslov": "pH lestvica",
+    "naslov": "Kislo, nevtralno ali bazično?"
+  },
+  "napake": {
+    "nadnaslov": "Pogoste napake",
+    "naslov": "Česa ne počnite doma",
+    "besedilo": "Te napake vidimo najpogosteje. Večina pusti trajne posledice.",
+    "seznam": [
+      {
+        "naslov": "Kis na marmorju",
+        "besedilo": "Kis in citronska kislina razjedata marmor, apnenec in travertin. Ostanejo motne lise, ki jih odstrani le brušenje."
+      },
+      {
+        "naslov": "Mešanje čistil",
+        "besedilo": "Nikoli ne mešajte čistil s klorom s kislimi čistili ali amoniakom. Nastajajo strupeni plini."
+      },
+      {
+        "naslov": "Preveč vode na parketu",
+        "besedilo": "Les vpija vlago in nabrekne. Parket čistimo z dobro ožeto krpo in nevtralnim čistilom."
+      },
+      {
+        "naslov": "Grobe gobice na steklu in inoksu",
+        "besedilo": "Abrazivi pustijo drobne praske, ki se sčasoma vidijo kot motnost."
+      }
+    ]
+  },
+  "sredstva": {
+    "nadnaslov": "Varna domača čistila",
+    "naslov": "Naravna sredstva za vsak dan",
+    "besedilo": "Za vzdrževanje med našimi obiski priporočamo naravna sredstva, varna za ljudi in živali.",
+    "seznam": [
+      {
+        "ph": "pH ≈ 2",
+        "naslov": "Citronska kislina",
+        "besedilo": "Za vodni kamen v grelnikih, na pipah in tuš kabinah.",
+        "opozorilo": "Ne na marmor in naravni kamen."
+      },
+      {
+        "ph": "pH ≈ 2–3",
+        "naslov": "Kis",
+        "besedilo": "Razredčen z vodo očisti steklo in nevtralizira vonjave.",
+        "opozorilo": "Ne na marmor, granit in naoljen les."
+      },
+      {
+        "ph": "pH ≈ 8–9",
+        "naslov": "Soda bikarbona",
+        "besedilo": "Za maščobo v pečici, zažgane lonce in vonjave.",
+        "opozorilo": "Previdno na sijajnih površinah."
+      },
+      {
+        "ph": "Mineralna voda",
+        "naslov": "Radenska",
+        "besedilo": "Pri svežih madežih na tekstilu in za sijaj stekla ter kroma.",
+        "opozorilo": "Madež popivnajte, ne drgnite."
+      }
+    ],
+    "opozorilo_krepko": "Kisa in sode bikarbone ne mešajte skupaj.",
+    "opozorilo": "Mešanica sicer peni, a se snovi nevtralizirata in učinek se izgubi. Uporabite ju ločeno."
+  }
+}

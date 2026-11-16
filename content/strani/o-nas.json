@@ -1,0 +1,84 @@
+{
+  "seo": {
+    "naslov": "O nas",
+    "opis": "Unimark je čistilni servis iz Grosuplja z več kot 10 leti izkušenj. Čistimo domove, podjetja in kulturne ustanove v Grosuplju, Ljubljani in okolici."
+  },
+  "pasica": {
+    "naslov": "O podjetju Unimark",
+    "podnaslov": "Čistilni servis iz Brezij pri Grosupljem. Že več kot deset let skrbimo za čistočo domov, podjetij, blokov in kulturnih ustanov.",
+    "slika": "/assets/img/foto/ekipa-stopnice.webp"
+  },
+  "zgodba": {
+    "nadnaslov": "Kdo smo",
+    "naslov": "Čistimo z znanjem, ne le s krpo",
+    "uvod": "Naša zgodba se je začela z vprašanjem, ki ga mnogi ne postavijo: s čim čistimo?",
+    "besedilo": "<p>Napačno čistilo lahko marmor razjeda, parket napihne, žaluzije pa pusti polne lis. Zato pri nas izbira čistila ni naključje. Vsak prostor najprej pogledamo, ugotovimo, za kakšno umazanijo in kakšne materiale gre, nato izberemo pravo sredstvo in tehniko.</p>\n<p>Naša ekipa je majhna in zanesljiva, zato vas pogosto obiskujejo isti ljudje, ki vaš prostor in vaše navade dobro poznajo. Delamo od ponedeljka do sobote in se prilagodimo vašemu urniku.</p>",
+    "slika": "/assets/img/foto/potem1.webp",
+    "slika_opis": "Naša ekipa med čiščenjem steklene strehe",
+    "slika2": "/assets/img/foto/okna.webp",
+    "slika2_opis": "Čiščenje okna",
+    "znacka_stevilka": "10+",
+    "znacka_besedilo": "let\nizkušenj"
+  },
+  "stevilke": [
+    {
+      "stevilka": "10+",
+      "opis": "let izkušenj"
+    },
+    {
+      "stevilka": "[st_storitev]",
+      "opis": "vrst storitev"
+    },
+    {
+      "stevilka": "1 dan",
+      "opis": "do odgovora na povpraševanje"
+    },
+    {
+      "stevilka": "0 €",
+      "opis": "za ponudbo"
+    }
+  ],
+  "vrednote": {
+    "nadnaslov": "Naše vrednote",
+    "naslov": "Na čem gradimo",
+    "seznam": [
+      {
+        "naslov": "Natančnost",
+        "besedilo": "Čistimo tudi robove, stikala, fuge in police nad očmi.",
+        "ikona": "target"
+      },
+      {
+        "naslov": "Zanesljivost",
+        "besedilo": "Pridemo ob dogovorjenem času in opravimo, kar smo obljubili.",
+        "ikona": "check"
+      },
+      {
+        "naslov": "Znanje",
+        "besedilo": "Vemo, kdaj uporabiti kislo, nevtralno ali bazično čistilo.",
+        "ikona": "flask"
+      },
+      {
+        "naslov": "Diskretnost",
+        "besedilo": "Spoštujemo vašo zasebnost in lastnino.",
+        "ikona": "eye"
+      }
+    ]
+  },
+  "obmocje": {
+    "nadnaslov": "Območje delovanja",
+    "naslov": "Grosuplje, Ljubljana in okolica",
+    "besedilo": "Naš sedež je v Brezjah pri Grosupljem, zato smo hitro pri vas. Za večje ali redne projekte pridemo tudi dlje.",
+    "glavni_kraji": [
+      "Grosuplje",
+      "Ljubljana"
+    ],
+    "kraji": [
+      "Škofljica",
+      "Šmarje - Sap",
+      "Ivančna Gorica",
+      "Dobrepolje",
+      "Višnja Gora",
+      "Ig"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "seo": {
+    "naslov": "Reference in mnenja strank",
+    "opis": "Mnenja strank in primeri del čistilnega servisa Unimark. Prej in potem: čiščenje oken, steklenih streh in žaluzij."
+  },
+  "pasica": {
+    "naslov": "Reference in mnenja strank",
+    "podnaslov": "Primeri naših del in mnenja domov, podjetij in ustanov, za katere skrbimo.",
+    "slika": "/assets/img/foto/okna.webp"
+  },
+  "galerija": {
+    "nadnaslov": "Galerija",
+    "naslov": "Iz našega dela"
+  },
+  "mnenja": {
+    "nadnaslov": "Mnenja strank",
+    "naslov": "Kaj pravijo naše stranke"
+  }
+}

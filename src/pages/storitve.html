@@ -17,14 +17,11 @@
 <section class="section section-tint">
   <div class="container">
     <div class="sec-head">
-      <span class="kicker">Pri vsaki storitvi</span>
-      <h2>Kaj dobite z Unimarkom</h2>
+      <span class="kicker">{{t:prednosti.nadnaslov}}</span>
+      <h2>{{t:prednosti.naslov}}</h2>
     </div>
     <div class="values">
-      <div class="value reveal"><span class="icon-circle">{{icon:flask}}</span><h3>Pravo čistilo</h3><p>Kislo, nevtralno ali bazično, prilagojeno umazaniji in materialu.</p></div>
-      <div class="value reveal" style="--d:80ms"><span class="icon-circle">{{icon:shield}}</span><h3>Lastna oprema</h3><p>Pridemo z vsem potrebnim. Vi ne pripravite ničesar.</p></div>
-      <div class="value reveal" style="--d:160ms"><span class="icon-circle">{{icon:euro}}</span><h3>Jasna ponudba</h3><p>Brezplačna in neobvezujoča, brez skritih stroškov.</p></div>
-      <div class="value reveal" style="--d:240ms"><span class="icon-circle">{{icon:calendar}}</span><h3>Vaš urnik</h3><p>Od ponedeljka do sobote, enkratno ali redno.</p></div>
+      {{#each prednosti.seznam}}<div class="value reveal"{{.ds:80:4}}><span class="icon-circle">{{.icon:ikona:check}}</span><h3>{{.naslov}}</h3><p>{{.besedilo}}</p></div>{{/each}}
     </div>
   </div>
 </section>
