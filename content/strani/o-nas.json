@@ -1,8 +1,4 @@
 {
-  "seo": {
-    "naslov": "O nas",
-    "opis": "Unimark je čistilni servis iz Grosuplja z več kot 10 leti izkušenj. Čistimo domove, podjetja in kulturne ustanove v Grosuplju, Ljubljani in okolici."
-  },
   "pasica": {
     "naslov": "O podjetju Unimark",
     "podnaslov": "Čistilni servis iz Brezij pri Grosupljem. Že več kot deset let skrbimo za čistočo domov, podjetij, blokov in kulturnih ustanov.",
@@ -12,7 +8,7 @@
     "nadnaslov": "Kdo smo",
     "naslov": "Čistimo z znanjem, ne le s krpo",
     "uvod": "Naša zgodba se je začela z vprašanjem, ki ga mnogi ne postavijo: s čim čistimo?",
-    "besedilo": "<p>Napačno čistilo lahko marmor razjeda, parket napihne, žaluzije pa pusti polne lis. Zato pri nas izbira čistila ni naključje. Vsak prostor najprej pogledamo, ugotovimo, za kakšno umazanijo in kakšne materiale gre, nato izberemo pravo sredstvo in tehniko.</p>\n<p>Naša ekipa je majhna in zanesljiva, zato vas pogosto obiskujejo isti ljudje, ki vaš prostor in vaše navade dobro poznajo. Delamo od ponedeljka do sobote in se prilagodimo vašemu urniku.</p>",
+    "besedilo": "<p>Napačno čistilo lahko marmor razjeda, parket napihne, žaluzije pa pusti polne lis. Zato pri nas izbira čistila ni naključje. Vsak prostor najprej pogledamo, ugotovimo, za kakšno umazanijo in kakšne materiale gre, nato izberemo pravo sredstvo in tehniko.</p><p>Naša ekipa je majhna in zanesljiva, zato vas pogosto obiskujejo isti ljudje, ki vaš prostor in vaše navade dobro poznajo. Delamo od ponedeljka do sobote in se prilagodimo vašemu urniku.</p>",
     "slika": "/assets/img/foto/potem1.webp",
     "slika_opis": "Naša ekipa med čiščenjem steklene strehe",
     "slika2": "/assets/img/foto/okna.webp",
@@ -80,5 +76,9 @@
       "Višnja Gora",
       "Ig"
     ]
+  },
+  "seo": {
+    "naslov": "O nas",
+    "opis": "Unimark je čistilni servis iz Grosuplja z več kot 10 leti izkušenj. Čistimo domove, podjetja in kulturne ustanove v Grosuplju, Ljubljani in okolici."
   }
 }
