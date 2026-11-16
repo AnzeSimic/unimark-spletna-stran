@@ -1,0 +1,309 @@
+# Nastavitve urejevalnika Pages CMS (https://app.pagescms.org)
+# Stranka tukaj ureja vsebino v mapi content/ in fotografije v assets/img/foto/.
+# Po vsakem shranjevanju GitHub stran samodejno zgradi in objavi na unimark.si (čez nekaj minut).
+
+media:
+  input: assets/img/foto
+  output: /assets/img/foto
+  extensions: [jpg, jpeg, png, webp]
+  rename: safe
+
+settings:
+  hide: true
+
+content:
+  - name: podjetje
+    label: Kontakt in delovni čas
+    type: file
+    path: content/podjetje.json
+    format: json
+    fields:
+      - name: telefon
+        label: Telefonska številka
+        type: string
+        required: true
+        description: "Npr. 070 325 039. Prikaže se v glavi, nogi in na vseh gumbih »Pokličite«."
+      - name: email
+        label: E-poštni naslov
+        type: string
+        required: true
+        description: "Prikazan na strani. Povpraševanja z obrazca še naprej prihajajo na info.unimark@gmail.com."
+      - name: delovni_cas_pon_pet
+        label: Delovni čas od ponedeljka do petka
+        type: string
+        required: true
+        description: "Zapis kot 6.00–18.00"
+      - name: delovni_cas_sobota
+        label: Delovni čas v soboto
+        type: string
+        description: "Zapis kot 8.00–13.00. Če ob sobotah ne delate, napišite Zaprto."
+
+  - name: ocene
+    label: Mnenja strank
+    type: file
+    path: content/ocene.json
+    format: json
+    fields:
+      - name: ocene
+        label: Mnenja strank
+        description: "Prva tri mnenja so prikazana na domači strani, vsa pa na strani Reference. Objavljajte samo resnična mnenja."
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.ime}: {fields.besedilo}"
+        fields:
+          - name: ime
+            label: Ime stranke
+            type: string
+            required: true
+            description: "Npr. Maja K. ali Sara in Blaž"
+          - name: opis
+            label: Kratek opis
+            type: string
+            description: "Npr. Čiščenje stanovanja, Ljubljana"
+          - name: besedilo
+            label: Mnenje
+            type: text
+            required: true
+
+  - name: prej-potem
+    label: Prej in potem
+    type: file
+    path: content/prej-potem.json
+    format: json
+    fields:
+      - name: primerjave
+        label: Primerjave prej in potem
+        description: "Slike z drsnikom na strani Reference. Prva primerjava je prikazana tudi na domači strani in pri čiščenju oken. Obe sliki naj bosta posneti iz istega kota."
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.naslov}"
+        fields:
+          - name: naslov
+            label: Naslov
+            type: string
+            required: true
+            description: "Npr. Zunanje žaluzije"
+          - name: besedilo
+            label: Kratek opis dela
+            type: text
+          - name: prej
+            label: Slika PRED čiščenjem
+            type: image
+            required: true
+          - name: potem
+            label: Slika PO čiščenju
+            type: image
+            required: true
+          - name: napis
+            label: Napis pod sliko
+            type: string
+            description: "Npr. Zunanje aluminijaste žaluzije, naše delo."
+          - name: opis_prej
+            label: Opis slike PRED (za slabovidne in Google)
+            type: string
+          - name: opis_potem
+            label: Opis slike PO (za slabovidne in Google)
+            type: string
+
+  - name: galerija
+    label: Galerija
+    type: file
+    path: content/galerija.json
+    format: json
+    fields:
+      - name: slike
+        label: Slike v galeriji (stran Reference)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.opis}"
+        fields:
+          - name: slika
+            label: Slika
+            type: image
+            required: true
+          - name: opis
+            label: Napis na sliki
+            type: string
+            description: "Npr. Steklena streha po čiščenju"
+          - name: opis_slike
+            label: Opis slike (za slabovidne in Google)
+            type: string
+          - name: siroka
+            label: Široka slika čez celo vrstico
+            type: boolean
+
+  - name: vprasanja
+    label: Pogosta vprašanja
+    type: file
+    path: content/vprasanja.json
+    format: json
+    fields:
+      - name: skupine
+        label: Skupine vprašanj
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.skupina}"
+        fields:
+          - name: skupina
+            label: Ime skupine
+            type: string
+            required: true
+          - name: ikona
+            label: Ikona
+            type: select
+            options:
+              values:
+                - { name: question, label: Vprašaj }
+                - { name: spray, label: Razpršilo }
+                - { name: clipboard, label: Seznam }
+                - { name: euro, label: Evro }
+                - { name: calendar, label: Koledar }
+                - { name: shield, label: Ščit }
+          - name: vprasanja
+            label: Vprašanja
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.vprasanje}"
+            fields:
+              - name: vprasanje
+                label: Vprašanje
+                type: string
+                required: true
+              - name: odgovor
+                label: Odgovor
+                type: rich-text
+                required: true
+                options:
+                  format: html
+                  media: false
+              - name: na_domaci_strani
+                label: Prikaži tudi na domači strani
+                type: boolean
+                description: "Priporočamo 3 do 5 vprašanj na domači strani."
+
+  - name: storitve
+    label: Storitve
+    type: collection
+    path: content/storitve
+    format: json
+    filename: "{fields.kratko_ime}.json"
+    view:
+      fields: [naslov, vrstni_red]
+      primary: naslov
+      sort: [vrstni_red, naslov]
+      default:
+        sort: vrstni_red
+        order: asc
+    operations:
+      rename: false
+    fields:
+      - name: naslov
+        label: Ime storitve
+        type: string
+        required: true
+        description: "Npr. Čiščenje domov in stanovanj"
+      - name: kratko_ime
+        label: Kratko ime (v meniju)
+        type: string
+        required: true
+        description: "Npr. Domovi in stanovanja"
+      - name: vrstni_red
+        label: Vrstni red
+        type: number
+        description: "1 = prva storitev, 2 = druga …"
+      - name: ikona
+        label: Ikona
+        type: select
+        options:
+          values:
+            - { name: home, label: Hiša }
+            - { name: office, label: Pisarna }
+            - { name: blocks, label: Bloki }
+            - { name: museum, label: Muzej }
+            - { name: sparkles, label: Iskrice }
+            - { name: window, label: Okno }
+            - { name: spray, label: Razpršilo }
+            - { name: drop, label: Kapljica }
+            - { name: shield, label: Ščit }
+            - { name: users, label: Ljudje }
+      - name: opis_na_kartici
+        label: Kratek opis (kartica na domači strani)
+        type: text
+        required: true
+      - name: slika
+        label: Glavna slika
+        type: image
+        required: true
+      - name: slika_opis
+        label: Opis glavne slike (za slabovidne in Google)
+        type: string
+      - name: naslov_strani
+        label: Naslov na strani storitve
+        type: string
+      - name: uvod
+        label: Uvodni stavek pod naslovom
+        type: text
+      - name: besedilo
+        label: Opis storitve
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: slika2
+        label: Druga slika (pod opisom)
+        type: image
+      - name: slika2_opis
+        label: Opis druge slike
+        type: string
+      - name: vkljucuje
+        label: Kaj vključuje čiščenje
+        type: string
+        list: true
+      - name: dodatno
+        label: Dodatno po dogovoru
+        type: string
+        list: true
+      - name: za_koga
+        label: Za koga je storitev primerna
+        type: string
+        list: true
+      - name: vprasanja
+        label: Pogosta vprašanja pri tej storitvi
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.vprasanje}"
+        fields:
+          - name: vprasanje
+            label: Vprašanje
+            type: string
+            required: true
+          - name: odgovor
+            label: Odgovor
+            type: rich-text
+            required: true
+            options:
+              format: html
+              media: false
+      - name: pokazi_pogostost
+        label: Prikaži razdelek »Kako pogosto?«
+        type: boolean
+      - name: pokazi_prej_potem
+        label: Prikaži prvo primerjavo prej/potem
+        type: boolean
+      - name: opis_za_google
+        label: Opis za Google (do 160 znakov)
+        type: text
+        options:
+          maxlength: 170

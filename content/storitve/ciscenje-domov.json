@@ -1,0 +1,52 @@
+{
+  "naslov": "Čiščenje domov in stanovanj",
+  "kratko_ime": "Domovi in stanovanja",
+  "vrstni_red": 1,
+  "ikona": "home",
+  "opis_na_kartici": "Redno ali enkratno čiščenje stanovanj in hiš: kuhinja, kopalnica, tla, prah in vse površine.",
+  "naslov_strani": "Čiščenje stanovanj in hiš",
+  "uvod": "Redno ali enkratno čiščenje doma v Grosuplju, Ljubljani in okolici. Kuhinja, kopalnica, tla, prah in vse površine, po vašem urniku.",
+  "opis_za_google": "Čiščenje stanovanj in hiš v Grosuplju, Ljubljani in okolici. Redno ali enkratno, s profesionalno opremo in pravimi čistili. Brezplačna ponudba.",
+  "slika": "/assets/img/foto/dom-pomivanje.webp",
+  "slika_opis": "Čistilka pomiva lesena tla v dnevni sobi",
+  "slika2": "/assets/img/foto/dom-sesanje.webp",
+  "slika2_opis": "Sesanje oblazinjenega pohištva",
+  "besedilo": "<p>Dom je prostor, kjer se želite spočiti, ne pa preživljati vikendov s krpo v roki. Mi poskrbimo za temeljito čistočo, vi pa za tisto, kar vam je zares pomembno.</p>\n<p>Pri vsakem obisku upoštevamo materiale v vašem domu: parket, laminat, naravni kamen, steklo in kromirane površine potrebujejo vsak svoje čistilo. Tako je rezultat lep in hkrati varen za površine.</p>",
+  "vkljucuje": [
+    "Sesanje in pomivanje vseh tal",
+    "Brisanje prahu s polic in pohištva",
+    "Kopalnica in WC, tudi vodni kamen",
+    "Kuhinjski pulti, štedilnik in korito",
+    "Ogledala in steklene površine",
+    "Praznjenje košev in zračenje"
+  ],
+  "dodatno": [
+    "Notranjost pečice in hladilnika",
+    "Okna, okvirji in žaluzije",
+    "Balkon ali terasa",
+    "Notranjost omar"
+  ],
+  "za_koga": [
+    "Družine",
+    "Zaposleni pari",
+    "Starejši",
+    "Najemodajalci",
+    "Pred praznikom ali obiskom"
+  ],
+  "pokazi_pogostost": true,
+  "pokazi_prej_potem": false,
+  "vprasanja": [
+    {
+      "vprasanje": "Ali moram biti doma med čiščenjem?",
+      "odgovor": "<p>Ni nujno. Mnogo strank nam po dogovoru zaupa ključ ali kodo, tako da čistimo, medtem ko ste v službi. O vseh podrobnostih se dogovorimo vnaprej.</p>"
+    },
+    {
+      "vprasanje": "Ali prinesete svoja čistila in opremo?",
+      "odgovor": "<p>Da. Prinesemo profesionalno opremo in čistila, izbrana glede na površine v vašem domu. Če imate za kakšen material posebna navodila, nam to le povejte.</p>"
+    },
+    {
+      "vprasanje": "Ali je čiščenje varno za otroke in hišne ljubljenčke?",
+      "odgovor": "<p>Čistila izbiramo glede na vrsto umazanije in jih uporabljamo v pravilnih razmerjih. Če imate doma dojenčka, alergika ali živali, nas opozorite in prilagodimo izbor sredstev.</p>"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "naslov": "Generalna čiščenja in čiščenja po prenovi",
+  "kratko_ime": "Generalna čiščenja",
+  "vrstni_red": 5,
+  "ikona": "sparkles",
+  "opis_na_kartici": "Po prenovi, gradbenih delih ali selitvi. Gradbeni prah, ostanki barve in ometa, globinsko čiščenje.",
+  "naslov_strani": "Generalno čiščenje in čiščenje po prenovi",
+  "uvod": "Po prenovah, gradbenih delih in selitvah odstranimo gradbeni prah ter ostanke barve, ometa in silikona, da je prostor takoj pripravljen za uporabo.",
+  "opis_za_google": "Generalno čiščenje po prenovi, gradbenih delih ali selitvi. Odstranjevanje gradbenega prahu, ostankov barve in ometa. Grosuplje, Ljubljana, okolica.",
+  "slika": "/assets/img/foto/prenova-kuhinja.webp",
+  "slika_opis": "Kuhinja med prenovo, pokrita s folijo",
+  "slika2": "/assets/img/foto/prenova-brisanje.webp",
+  "slika2_opis": "Brisanje lesene površine z rokavicami",
+  "besedilo": "<p>Gradbeni prah se usede povsod: na police, v omare, na okenske okvirje in celo v stikala. Navadno pospravljanje ga le premakne z mesta na mesto.</p>\n<p>Pri generalnem čiščenju gremo sistematično od zgoraj navzdol, odstranimo sledi barve, ometa in lepil ter očistimo tudi mesta, ki jih pri rednem čiščenju ne dosežemo. Rezultat je prostor, v katerega se lahko takoj vselite ali ga predate najemniku.</p>",
+  "vkljucuje": [
+    "Gradbeni prah z vseh površin",
+    "Ostanki barve, ometa in silikona",
+    "Okna, okvirji, police in žaluzije",
+    "Notranjost omar in kuhinjskih elementov",
+    "Sanitarije, ploščice in fuge",
+    "Globinsko čiščenje tal"
+  ],
+  "dodatno": [
+    "Čiščenje pred vselitvijo",
+    "Čiščenje pred oddajo nepremičnine",
+    "Spomladansko generalno čiščenje",
+    "Čiščenje po zalitju"
+  ],
+  "za_koga": [
+    "Po prenovi",
+    "Po gradnji",
+    "Pred vselitvijo",
+    "Ob izselitvi",
+    "Nepremičninski posredniki"
+  ],
+  "pokazi_pogostost": false,
+  "pokazi_prej_potem": false,
+  "vprasanja": [
+    {
+      "vprasanje": "Kdaj naj naročim čiščenje po prenovi?",
+      "odgovor": "<p>Ko so vsa gradbena in obrtniška dela zaključena. Če bodo izvajalci še prihajali, se prah hitro znova nabere. Termin rezervirajte nekaj dni vnaprej.</p>"
+    },
+    {
+      "vprasanje": "Ali odpeljete tudi gradbeni odpad?",
+      "odgovor": "<p>Ne. Odvoz gradbenega materiala in kosovnih odpadkov ni del naše storitve. Prostor očistimo, ko je odpad že odstranjen.</p>"
+    },
+    {
+      "vprasanje": "Koliko časa traja generalno čiščenje?",
+      "odgovor": "<p>Odvisno od velikosti in stanja prostora. Povprečno stanovanje po prenovi običajno očistimo v enem dnevu. Natančno oceno dobite v ponudbi.</p>"
+    }
+  ]
+}

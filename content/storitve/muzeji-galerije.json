@@ -1,0 +1,52 @@
+{
+  "naslov": "Čiščenje muzejev in galerij",
+  "kratko_ime": "Muzeji in galerije",
+  "vrstni_red": 4,
+  "ikona": "museum",
+  "opis_na_kartici": "Občutljivi materiali in razstavni prostori, čiščeni z varno, pH-nevtralno kemijo.",
+  "naslov_strani": "Čiščenje muzejev, galerij in razstavišč",
+  "uvod": "Specializirano čiščenje kulturnih ustanov. Marmor, granit, steklene vitrine in občutljive materiale čistimo z varno, pH-nevtralno kemijo.",
+  "opis_za_google": "Specializirano čiščenje muzejev, galerij in razstavišč s pH-nevtralnimi čistili. Varno za marmor, granit, steklene vitrine in občutljive materiale.",
+  "slika": "/assets/img/foto/muzej-kipi.webp",
+  "slika_opis": "Razstavna dvorana s kipi in marmornimi tlemi",
+  "slika2": "/assets/img/foto/galerija.webp",
+  "slika2_opis": "Galerija s slikami na stenah",
+  "besedilo": "<p>V kulturnih ustanovah ni prostora za napake. Napačno čistilo lahko na marmorju ali drugem naravnem kamnu pusti trajne sledi, ki jih ni mogoče popraviti.</p>\n<p>Zato v razstavnih prostorih uporabljamo pH-nevtralna sredstva, delamo natančno in diskretno ter se držimo navodil kustosov in konservatorjev. Čistimo prostore in površine okoli eksponatov, vitrine in podstavke, nikoli pa ne posegamo v predmete brez izrecnega dogovora.</p>",
+  "vkljucuje": [
+    "Razstavni prostori in hodniki",
+    "Steklene vitrine brez lis",
+    "Tla iz marmorja, granita in teraca",
+    "Podstavki in okvirji po navodilih",
+    "Vhodi, recepcija in garderobe",
+    "Sanitarije za obiskovalce"
+  ],
+  "dodatno": [
+    "Čiščenje pred odprtjem razstave",
+    "Čiščenje po dogodkih",
+    "Termini izven odpiralnega časa",
+    "Usklajevanje s konservatorji"
+  ],
+  "za_koga": [
+    "Muzeji",
+    "Galerije",
+    "Razstavišča",
+    "Kulturni domovi",
+    "Knjižnice"
+  ],
+  "pokazi_pogostost": false,
+  "pokazi_prej_potem": false,
+  "vprasanja": [
+    {
+      "vprasanje": "Zakaj je pH-nevtralno čiščenje pomembno?",
+      "odgovor": "<p>Kisla čistila raztapljajo apnenčaste kamnine, kot je marmor, močno bazična pa lahko poškodujejo zaščitne premaze in nekatere kovine. Nevtralna sredstva odstranijo prah in umazanijo, ne da bi spremenila površino. Več na strani <a href=\"strokovnost.html\">Strokovnost</a>.</p>"
+    },
+    {
+      "vprasanje": "Ali čistite tudi eksponate?",
+      "odgovor": "<p>Eksponatov ne čistimo samoiniciativno. Če ustanova želi, da očistimo vitrine od znotraj ali posamezne predmete, to izvedemo izključno po navodilih in v prisotnosti odgovorne osebe.</p>"
+    },
+    {
+      "vprasanje": "Ali lahko čistite, ko je ustanova zaprta?",
+      "odgovor": "<p>Da, termin prilagodimo odpiralnemu času, tako da obiskovalci čiščenja sploh ne opazijo.</p>"
+    }
+  ]
+}

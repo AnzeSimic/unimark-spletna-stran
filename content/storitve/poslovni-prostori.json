@@ -1,0 +1,52 @@
+{
+  "naslov": "Čiščenje poslovnih prostorov",
+  "kratko_ime": "Poslovni prostori",
+  "vrstni_red": 2,
+  "ikona": "office",
+  "opis_na_kartici": "Pisarne, trgovine, lokali in skupni prostori. Urejeno delovno okolje, ki pusti dober vtis.",
+  "naslov_strani": "Čiščenje pisarn in poslovnih prostorov",
+  "uvod": "Redno čiščenje pisarn, trgovin, lokalov in skupnih prostorov. Zanesljivo, po dogovorjenem urniku in brez motenja vašega dela.",
+  "opis_za_google": "Čiščenje pisarn, trgovin in poslovnih prostorov v Grosuplju in Ljubljani. Redno vzdrževanje po dogovoru, zanesljiva ekipa, transparentna ponudba.",
+  "slika": "/assets/img/foto/pisarna-sesanje.webp",
+  "slika_opis": "Očiščen hodnik poslovnih prostorov s steklenimi pisarnami",
+  "slika2": "/assets/img/foto/pisarna-cistilki.webp",
+  "slika2_opis": "Čistilki med čiščenjem svetle pisarne",
+  "besedilo": "<p>Prvi vtis stranke o vašem podjetju se začne že na vratih. Urejeni prostori sporočajo profesionalnost, zaposlenim pa zagotavljajo prijetnejše in bolj zdravo delovno okolje.</p>\n<p>Z vami se dogovorimo za obseg, pogostost in termin čiščenja, ki ne moti vašega dela: zgodaj zjutraj ali po zaključku delovnega dne. Vedno ista ekipa pomeni, da vaše prostore in navade dobro pozna.</p>",
+  "vkljucuje": [
+    "Delovne površine, mize in police",
+    "Sesanje in pomivanje tal",
+    "Sanitarije in umivalnice",
+    "Čajne kuhinje in jedilnice",
+    "Steklene stene, vrata in vhodi",
+    "Praznjenje košev in ločevanje odpadkov"
+  ],
+  "dodatno": [
+    "Okna in žaluzije",
+    "Globinsko čiščenje tal",
+    "Čiščenje po selitvi pisarne",
+    "Čiščenje po dogodkih"
+  ],
+  "za_koga": [
+    "Pisarne",
+    "Trgovine",
+    "Gostinski lokali",
+    "Ordinacije",
+    "Saloni in studii"
+  ],
+  "pokazi_pogostost": true,
+  "pokazi_prej_potem": false,
+  "vprasanja": [
+    {
+      "vprasanje": "Ali čistite izven delovnega časa podjetja?",
+      "odgovor": "<p>Da. Termin prilagodimo vašemu delovnemu času: zgodaj zjutraj, preden pridejo zaposleni, ali po zaključku dela. Naš delovni čas je od ponedeljka do petka med 6.00 in 18.00 ter v soboto med 8.00 in 13.00.</p>"
+    },
+    {
+      "vprasanje": "Ali za čiščenje izstavite račun?",
+      "odgovor": "<p>Da, za vsako storitev prejmete račun. Podjetje ni zavezanec za DDV, zato DDV na računu ni obračunan.</p>"
+    },
+    {
+      "vprasanje": "Ali se lahko dogovorimo za redno čiščenje?",
+      "odgovor": "<p>Seveda. Večina poslovnih strank ima redno čiščenje tedensko ali večkrat na teden. Obseg in termine določimo skupaj in jih po potrebi prilagodimo.</p>"
+    }
+  ]
+}

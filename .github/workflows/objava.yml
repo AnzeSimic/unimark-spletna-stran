@@ -1,0 +1,37 @@
+# Ob vsaki spremembi (tudi iz Pages CMS) zgradi stran in jo pripravi v veji "deploy".
+# Strežnik Domenca vsakih 5 minut preveri to vejo in naloži novo različico (glej deploy/unimark-objava.sh).
+name: Objava strani
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: objava
+  cancel-in-progress: true
+
+jobs:
+  objava:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node build.mjs
+      - name: Shrani zgrajeno stran v vejo deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd dist
+          echo "$GITHUB_SHA" > VERSION
+          git init -q -b deploy
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -m "Objava ${GITHUB_SHA::7}"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" deploy

@@ -1,0 +1,51 @@
+{
+  "naslov": "Čiščenje oken in žaluzij",
+  "kratko_ime": "Okna in žaluzije",
+  "vrstni_red": 6,
+  "ikona": "window",
+  "opis_na_kartici": "Okna, okvirji, steklene strehe, zimski vrtovi ter notranje in zunanje žaluzije. Brez lis.",
+  "naslov_strani": "Čiščenje oken, steklenih površin in žaluzij",
+  "uvod": "Okna, okvirji, steklene strehe in zimski vrtovi ter notranje in zunanje žaluzije. Z nevtralnimi čistili, brez lis in brez poškodb tesnil.",
+  "opis_za_google": "Čiščenje oken, steklenih površin, zimskih vrtov ter notranjih in zunanjih žaluzij. Brez lis in poškodb tesnil. Grosuplje, Ljubljana in okolica.",
+  "slika": "/assets/img/foto/okna.webp",
+  "slika_opis": "Čistilka čisti okno v svetlem prostoru",
+  "slika2": "/assets/img/foto/potem1.webp",
+  "slika2_opis": "Naša ekipa med čiščenjem steklene strehe zimskega vrta",
+  "besedilo": "<p>Čista okna spustijo v prostor več svetlobe in ga takoj osvežijo. Za rezultat brez lis pa ni dovolj le dobro čistilo, potrebna sta prava tehnika in oprema.</p>\n<p>Steklo in okvirje čistimo z nevtralnimi sredstvi, ki ne poškodujejo tesnil in premazov. Lamele žaluzij, aluminijaste ali plastične, očistimo posamično, da odstranimo prah, pajčevine in sledi vode.</p>",
+  "vkljucuje": [
+    "Steklo z notranje in zunanje strani",
+    "Okvirji, tesnila in police",
+    "Steklene strehe in zimski vrtovi",
+    "Notranje žaluzije in rolete",
+    "Zunanje aluminijaste žaluzije",
+    "Steklene stene in izložbe"
+  ],
+  "dodatno": [
+    "Komarniki",
+    "Steklene ograje balkonov",
+    "Redno čiščenje izložb",
+    "Okna po prenovi (nalepke, silikon)"
+  ],
+  "za_koga": [
+    "Stanovanja in hiše",
+    "Pisarne",
+    "Trgovine z izložbami",
+    "Zimski vrtovi"
+  ],
+  "pokazi_pogostost": true,
+  "pokazi_prej_potem": true,
+  "vprasanja": [
+    {
+      "vprasanje": "Ali čistite okna tudi v višjih nadstropjih?",
+      "odgovor": "<p>Okna čistimo z notranje strani in tam, kjer je dostop varen. Za fasadna okna, ki zahtevajo dvižno ploščad ali alpinistično opremo, se dogovorimo posebej.</p>"
+    },
+    {
+      "vprasanje": "Kako pogosto je priporočljivo čistiti okna?",
+      "odgovor": "<p>Za večino domov zadostuje dva do štirikrat na leto, za izložbe in poslovne prostore pogosteje. Žaluzije priporočamo očistiti vsaj enkrat do dvakrat na leto.</p>"
+    },
+    {
+      "vprasanje": "Ali čistite okna tudi pozimi?",
+      "odgovor": "<p>Da, če temperatura ni pod lediščem. Pri nizkih temperaturah lahko voda na steklu zamrzne, zato termin po potrebi prestavimo.</p>"
+    }
+  ]
+}

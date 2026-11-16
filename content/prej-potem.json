@@ -1,0 +1,22 @@
+{
+  "primerjave": [
+    {
+      "naslov": "Zunanje žaluzije",
+      "besedilo": "Sledi vode, prah in umazanija na aluminijastih lamelah. Vsako lamelo smo očistili posamično z nevtralnim čistilom.",
+      "prej": "/assets/img/foto/prej2.webp",
+      "potem": "/assets/img/foto/potem2.webp",
+      "opis_prej": "Zunanje žaluzije pred čiščenjem, z vidnimi sledmi vode in prahu",
+      "opis_potem": "Iste žaluzije po čiščenju",
+      "napis": "Zunanje aluminijaste žaluzije, naše delo."
+    },
+    {
+      "naslov": "Klimatska naprava",
+      "besedilo": "Porumenelo ohišje, madeži in nalet umazanije na loputi notranje enote. Ohišje in lamele smo temeljito očistili, ne da bi poškodovali plastiko ali napise.",
+      "prej": "/assets/img/foto/klima-prej.webp",
+      "potem": "/assets/img/foto/klima-potem.webp",
+      "opis_prej": "Notranja enota klimatske naprave pred čiščenjem, porumenelo in umazano ohišje",
+      "opis_potem": "Ista klimatska naprava po čiščenju, belo in čisto ohišje",
+      "napis": "Notranja enota klimatske naprave, naše delo."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "skupine": [
+    {
+      "skupina": "Splošno",
+      "ikona": "question",
+      "vprasanja": [
+        {
+          "vprasanje": "Na katerem območju čistite?",
+          "odgovor": "<p>Čistimo v Grosuplju, Ljubljani in širši okolici, na primer v Škofljici, Šmarju - Sapu, Ivančni Gorici in Dobrepolju. Za večje ali redne projekte pridemo tudi dlje, pokličite nas in se dogovorimo.</p>",
+          "na_domaci_strani": true
+        },
+        {
+          "vprasanje": "Koliko stane čiščenje?",
+          "odgovor": "<p>Cena je odvisna od vrste in velikosti prostora, njegovega stanja ter pogostosti čiščenja (tedensko, mesečno ali enkratno). Po vašem povpraševanju pripravimo brezplačno in neobvezujočo ponudbo. Podjetje ni zavezanec za DDV, zato so navedene cene končne.</p>",
+          "na_domaci_strani": true
+        },
+        {
+          "vprasanje": "Kako hitro odgovorite na povpraševanje?",
+          "odgovor": "<p>Običajno v enem delovnem dnevu. Če potrebujete čiščenje nujno, nas raje pokličite na <a href=\"tel:+38670325039\">070 325 039</a>.</p>",
+          "na_domaci_strani": false
+        },
+        {
+          "vprasanje": "Kakšen je vaš delovni čas?",
+          "odgovor": "<p>Od ponedeljka do petka med 6.00 in 18.00 ter v soboto med 8.00 in 13.00. Termin čiščenja vedno prilagodimo vašemu urniku.</p>",
+          "na_domaci_strani": false
+        }
+      ]
+    },
+    {
+      "skupina": "Izvedba čiščenja",
+      "ikona": "spray",
+      "vprasanja": [
+        {
+          "vprasanje": "Ali prinesete svoja čistila in opremo?",
+          "odgovor": "<p>Da. Pridemo s profesionalno opremo in čistili, ki jih izberemo glede na vrsto umazanije in material. Vi ne potrebujete pripraviti ničesar.</p>",
+          "na_domaci_strani": true
+        },
+        {
+          "vprasanje": "Ali moram biti prisoten med čiščenjem?",
+          "odgovor": "<p>Ne nujno. Po dogovoru nam lahko zaupate ključ ali kodo za vstop. Pri prvem obisku je dobro, da se srečamo in skupaj pregledamo prostor ter vaše želje.</p>",
+          "na_domaci_strani": false
+        },
+        {
+          "vprasanje": "So vaša čistila varna za otroke in živali?",
+          "odgovor": "<p>Čistila uporabljamo premišljeno in v pravih razmerjih. Pri občutljivih materialih in površinah, ki se jih pogosto dotikate, izberemo čim blažja sredstva. Če imate alergije ali posebne želje, nam to povejte vnaprej.</p>",
+          "na_domaci_strani": false
+        },
+        {
+          "vprasanje": "Kaj, če z rezultatom nisem zadovoljen?",
+          "odgovor": "<p>Pokličite nas ali pišite čim prej po čiščenju. Vsako pripombo vzamemo resno in jo skupaj z vami rešimo.</p>",
+          "na_domaci_strani": false
+        }
+      ]
+    },
+    {
+      "skupina": "Naročilo in plačilo",
+      "ikona": "clipboard",
+      "vprasanja": [
+        {
+          "vprasanje": "Kako oddam povpraševanje?",
+          "odgovor": "<p>Izpolnite <a href=\"kontakt.html#povprasevanje\">spletni obrazec</a> ali nas pokličite. Povejte nam, kaj želite očistiti, kje in kako pogosto, pa vam pripravimo ponudbo.</p>",
+          "na_domaci_strani": false
+        },
+        {
+          "vprasanje": "Ali ponujate redno čiščenje?",
+          "odgovor": "<p>Da. Redno čiščenje lahko poteka tedensko, na 14 dni ali mesečno. Pri rednem čiščenju je cena na obisk praviloma ugodnejša kot pri enkratnem.</p>",
+          "na_domaci_strani": false
+        },
+        {
+          "vprasanje": "Ali lahko prestavim ali odpovem termin?",
+          "odgovor": "<p>Lahko, po predhodnem dogovoru, praviloma vsaj 2 dni pred izvedbo. Spremembo nam sporočite po telefonu ali e-pošti.</p>",
+          "na_domaci_strani": true
+        },
+        {
+          "vprasanje": "Kako poteka plačilo?",
+          "odgovor": "<p>Plačilo poteka po dogovoru oziroma na podlagi računa, ki ga prejmete po opravljeni storitvi.</p>",
+          "na_domaci_strani": false
+        }
+      ]
+    }
+  ]
+}

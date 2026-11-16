@@ -1,0 +1,57 @@
+<!--{
+  "title": "Kontakt in povpraševanje",
+  "description": "Pokličite 070 325 039, pišite na info.unimark@gmail.com ali oddajte spletno povpraševanje. Brezplačna ponudba v enem delovnem dnevu.",
+  "nav": "kontakt",
+  "priority": "0.9",
+  "breadcrumb": [["Kontakt"]],
+  "jsonld": ["localbusiness"],
+  "banner": { "crumbs": [["Kontakt"]], "h1": "Kontakt", "lead": "Pokličite, pišite ali izpolnite obrazec. Brezplačno ponudbo prejmete običajno v enem delovnem dnevu.", "photo": "pisarnaMiza" }
+}-->
+<section class="section" style="padding-bottom:0">
+  <div class="container">
+    <div class="contact-cards">
+      <a class="contact-card reveal" href="{{phone-href}}"><span class="icon-circle">{{icon:phone}}</span><h3>Pokličite nas</h3><strong>{{phone}}</strong><span>Pokličite ali pošljite SMS</span></a>
+      <a class="contact-card reveal" style="--d:80ms" href="mailto:{{email}}"><span class="icon-circle">{{icon:mail}}</span><h3>Pišite nam</h3><strong>{{email}}</strong><span>Odgovorimo v enem delovnem dnevu</span></a>
+      <a class="contact-card reveal" style="--d:160ms" href="#povprasevanje"><span class="icon-circle">{{icon:clock}}</span><h3>Delovni čas</h3><strong>Pon.–pet. {{hours-week}}</strong><span>Sobota {{hours-sat}}</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="povprasevanje">
+  <div class="container inquiry">
+    <div class="reveal">{{big-form}}</div>
+    <div class="reveal" style="--d:100ms;display:grid;gap:24px">
+      <div>
+        <h2 style="font-size:1.4rem;margin-bottom:16px">Delovni čas</h2>
+        <table class="hours-table">
+          <tbody>
+            <tr data-day="1"><td>Ponedeljek</td><td>{{hours-week}}</td></tr>
+            <tr data-day="2"><td>Torek</td><td>{{hours-week}}</td></tr>
+            <tr data-day="3"><td>Sreda</td><td>{{hours-week}}</td></tr>
+            <tr data-day="4"><td>Četrtek</td><td>{{hours-week}}</td></tr>
+            <tr data-day="5"><td>Petek</td><td>{{hours-week}}</td></tr>
+            <tr data-day="6"><td>Sobota</td><td>{{hours-sat}}</td></tr>
+            <tr data-day="0" class="closed"><td>Nedelja in prazniki</td><td>Zaprto</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <dl class="company" style="margin:0">
+        <dt>Podjetje</dt><dd>{{legal-name}}</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="map-section" aria-label="Zemljevid">
+  <div class="map-box" data-map="{{maps-embed}}" style="border-radius:0;border:0;min-height:420px">
+    <div class="map-placeholder">
+      <div class="inner">
+        {{icon:pin}}
+        <strong>Brezje pri Grosupljem 87, 1290 Grosuplje</strong>
+        <p>Zemljevid ponuja Google. Ob nalaganju se lahko nastavijo piškotki tretjih oseb.</p>
+        <button class="btn btn-teal btn-sm" type="button" data-consent="map">Prikaži zemljevid</button>
+        <a class="more" href="{{maps-link}}" target="_blank" rel="noopener">Odpri v Google Zemljevidih {{icon:arrow}}</a>
+      </div>
+    </div>
+  </div>
+</section>

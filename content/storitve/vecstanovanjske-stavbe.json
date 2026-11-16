@@ -1,0 +1,51 @@
+{
+  "naslov": "Čiščenje večstanovanjskih stavb",
+  "kratko_ime": "Večstanovanjske stavbe",
+  "vrstni_red": 3,
+  "ikona": "blocks",
+  "opis_na_kartici": "Stopnišča, hodniki, vhodi in kletni prostori. Redno vzdrževanje po dogovoru z upravnikom.",
+  "naslov_strani": "Čiščenje stopnišč in skupnih prostorov",
+  "uvod": "Redno čiščenje stopnišč, hodnikov, vhodov in kletnih prostorov v blokih in večstanovanjskih hišah, po dogovoru z upravnikom ali etažnimi lastniki.",
+  "opis_za_google": "Čiščenje stopnišč, hodnikov in skupnih prostorov v blokih. Redno vzdrževanje po dogovoru z upravnikom, Grosuplje, Ljubljana in okolica.",
+  "slika": "/assets/img/foto/stopnisce.webp",
+  "slika_opis": "Svetlo stopnišče v večstanovanjski stavbi",
+  "slika2": "/assets/img/foto/stopnisce-okno.webp",
+  "slika2_opis": "Stopnišče z oknom",
+  "besedilo": "<p>Skupni prostori so vizitka stavbe. Čist vhod in urejeno stopnišče pomenita lepši vsakdan za vse stanovalce in višjo vrednost nepremičnine.</p>\n<p>Čiščenje uskladimo z upravnikom ali predstavnikom etažnih lastnikov: dogovorimo se za seznam opravil, pogostost in termin, nato pa skrbimo, da je vse narejeno zanesljivo, teden za tednom.</p>",
+  "vkljucuje": [
+    "Stopnišča in hodniki",
+    "Ograje, oprijemala in stikala",
+    "Vhodna vrata in steklo",
+    "Notranjost dvigala",
+    "Poštni nabiralniki",
+    "Kleti, kolesarnice in shrambe"
+  ],
+  "dodatno": [
+    "Okna na stopnišču",
+    "Generalno čiščenje ob prenovi stavbe",
+    "Čiščenje po selitvah",
+    "Prostor za smetnjake"
+  ],
+  "za_koga": [
+    "Upravniki stavb",
+    "Etažni lastniki",
+    "Stanovanjske skupnosti",
+    "Večstanovanjske hiše"
+  ],
+  "pokazi_pogostost": true,
+  "pokazi_prej_potem": false,
+  "vprasanja": [
+    {
+      "vprasanje": "Kdo naroči čiščenje skupnih prostorov?",
+      "odgovor": "<p>Običajno upravnik stavbe ali predstavnik etažnih lastnikov. Z veseljem pripravimo ponudbo, ki jo lahko predstavite na zboru lastnikov.</p>"
+    },
+    {
+      "vprasanje": "Kako pogosto čistite stopnišča?",
+      "odgovor": "<p>Najpogosteje enkrat tedensko ali na 14 dni, pri večjih stavbah tudi večkrat na teden. Pogostost prilagodimo velikosti stavbe in številu stanovalcev.</p>"
+    },
+    {
+      "vprasanje": "Ali stanovalci lahko sporočijo posebne želje?",
+      "odgovor": "<p>Da. Pripombe in želje sprejemamo prek upravnika ali neposredno po telefonu in jih upoštevamo pri naslednjem čiščenju.</p>"
+    }
+  ]
+}

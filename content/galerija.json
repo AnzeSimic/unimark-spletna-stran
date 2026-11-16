@@ -1,0 +1,28 @@
+{
+  "slike": [
+    {
+      "slika": "/assets/img/foto/prej1.webp",
+      "opis": "Steklena streha pred čiščenjem",
+      "opis_slike": "Umazana steklena streha zimskega vrta pred čiščenjem",
+      "siroka": false
+    },
+    {
+      "slika": "/assets/img/foto/potem1.webp",
+      "opis": "Čiščenje zimskega vrta",
+      "opis_slike": "Čiščenje steklene strehe zimskega vrta",
+      "siroka": false
+    },
+    {
+      "slika": "/assets/img/foto/potem2.webp",
+      "opis": "Žaluzije po čiščenju",
+      "opis_slike": "Očiščene zunanje žaluzije",
+      "siroka": false
+    },
+    {
+      "slika": "/assets/img/foto/klima-detajl.webp",
+      "opis": "Klimatska naprava pred čiščenjem: umazanija na loputi od blizu",
+      "opis_slike": "Od blizu: umazanija in madeži na loputi klimatske naprave pred čiščenjem",
+      "siroka": true
+    }
+  ]
+}

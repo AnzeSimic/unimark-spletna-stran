@@ -1,0 +1,12 @@
+{
+  "name": "unimark-spletna-stran",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node serve.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.33.5"
+  }
+}
