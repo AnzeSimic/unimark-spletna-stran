@@ -2,7 +2,7 @@
 # Samodejna objava unimark.si na gostovanju Domenca.
 # Cron ga zažene vsakih 5 minut: če je na GitHubu (veja "deploy") nova različica strani,
 # jo prenese in prepiše datoteke v public_html. Gesla ali žetoni niso potrebni (javni repozitorij).
-REPO="__REPO__"
+REPO="AnzeSimic/unimark-spletna-stran"
 DEST="$HOME/public_html"
 STATE="$HOME/.unimark-objava"
 TMP="$HOME/.unimark-objava-tmp"
